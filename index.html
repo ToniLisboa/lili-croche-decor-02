@@ -1,60 +1,367 @@
+Index.html
+
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lili Crochê Decor</title>
+    <title>Lili Crochê Decor - Artesanato em Crochê</title>
+    <meta name="description" content="Loja de artesanato em crochê com peças únicas e personalizadas. Decoração, roupas e acessórios feitos com amor.">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
-     <header class="header">
+    <header class="header">
         <nav class="navbar">
-            <div class="nav-conteiner">
+            <div class="nav-container">
                 <div class="nav-logo">
                     <h2>Lili Crochê Decor</h2>
                     <span>Artesanato com Amor</span>
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                     <a href="#home"class="nav-link">Início</a>
+                        <a href="#home" class="nav-link">Início</a>
                     </li>
                     <li class="nav-item">
-                     <a href="#produtos"class="nav-link">Produtos</a>
+                        <a href="#produtos" class="nav-link">Produtos</a>
                     </li>
                     <li class="nav-item">
-                     <a href="#Sobre"class="nav-link">Sobre</a>
+                        <a href="#sobre" class="nav-link">Sobre</a>
                     </li>
                     <li class="nav-item">
-                     <a href="#Galeria"class="nav-link">Galeria</a>
+                        <a href="#galeria" class="nav-link">Galeria</a>
                     </li>
                     <li class="nav-item">
-                     <a href="#Contato"class="nav-link">Contato</a>
+                        <a href="#contato" class="nav-link">Contato</a>
                     </li>
                 </ul>
                 <div class="nav-toggle" id="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </div>   
-            </div>    
+                </div>
+            </div>
         </nav>
-    </header> 
-    <!--Hero Section-->
+    </header>
+
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Bem-vindos à Lili Crochê Decor</h1>
+                <p class="hero-subtitle">Transformando fios em arte, criando peças únicas para decorar sua vida com amor e carinho.</p>
+                <div class="hero-buttons">
+                    <a href="#produtos" class="btn btn-primary">Ver Produtos</a>
+                    <a href="#contato" class="btn btn-secondary">Fazer Encomenda</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/placeholder.svg?height=400&width=500" alt="Artesanato em Crochê" class="hero-img">
+            </div>
         </div>
+    </section>
 
+    <!-- Produtos em Destaque -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Produtos em Destaque</h2>
+                <p class="section-subtitle">Conheça algumas de nossas criações mais especiais</p>
+            </div>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <div class="produto-image">
+                        <img src="/placeholder.svg?height=250&width=300" alt="Amigurumi">
+                        <div class="produto-overlay">
+                            <button class="btn-view" onclick="openModal('modal1')">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3>Amigurumis</h3>
+                        <p>Bichinhos fofos e personalizados</p>
+                        <span class="preco">A partir de R$ 25,00</span>
+                    </div>
+                </div>
 
-    </section>           
+                <div class="produto-card">
+                    <div class="produto-image">
+                        <img src="/placeholder.svg?height=250&width=300" alt="Decoração">
+                        <div class="produto-overlay">
+                            <button class="btn-view" onclick="openModal('modal2')">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3>Decoração</h3>
+                        <p>Tapetes, almofadas e enfeites</p>
+                        <span class="preco">A partir de R$ 35,00</span>
+                    </div>
+                </div>
 
-                
+                <div class="produto-card">
+                    <div class="produto-image">
+                        <img src="/placeholder.svg?height=250&width=300" alt="Roupas">
+                        <div class="produto-overlay">
+                            <button class="btn-view" onclick="openModal('modal3')">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3>Roupas</h3>
+                        <p>Blusas, vestidos e acessórios</p>
+                        <span class="preco">A partir de R$ 45,00</span>
+                    </div>
+                </div>
 
-            
+                <div class="produto-card">
+                    <div class="produto-image">
+                        <img src="/placeholder.svg?height=250&width=300" alt="Bebê">
+                        <div class="produto-overlay">
+                            <button class="btn-view" onclick="openModal('modal4')">Ver Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3>Bebê</h3>
+                        <p>Roupinhas e acessórios para bebês</p>
+                        <span class="preco">A partir de R$ 30,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2>Sobre a Lili Crochê Decor</h2>
+                    <p>Olá! Eu sou a Lili, apaixonada por crochê há mais de 10 anos. O que começou como um hobby se transformou em uma paixão que me permite criar peças únicas e especiais para pessoas especiais.</p>
+                    <p>Cada peça é feita com muito carinho e atenção aos detalhes, usando sempre materiais de qualidade. Acredito que o artesanato tem o poder de trazer aconchego e personalidade para qualquer ambiente.</p>
+                    <div class="sobre-stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Peças Criadas</p>
+                        </div>
+                        <div class="stat">
+                            <h3>200+</h3>
+                            <p>Clientes Felizes</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Anos de Experiência</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-image">
+                    <img src="/placeholder.svg?height=400&width=400" alt="Lili trabalhando" class="sobre-img">
+                </div>
+            </div>
+        </div>
+    </section>
 
-     
-    
+    <!-- Galeria -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Galeria de Trabalhos</h2>
+                <p class="section-subtitle">Veja alguns dos nossos trabalhos realizados</p>
+            </div>
+            <div class="galeria-grid">
+                <div class="galeria-item" onclick="openGalleryModal('/placeholder.svg?height=400&width=400')">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Trabalho 1">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="galeria-item" onclick="openGalleryModal('/placeholder.svg?height=400&width=400')">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Trabalho 2">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="galeria-item" onclick="openGalleryModal('/placeholder.svg?height=400&width=400')">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Trabalho 3">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="galeria-item" onclick="openGalleryModal('/placeholder.svg?height=400&width=400')">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Trabalho 4">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="galeria-item" onclick="openGalleryModal('/placeholder.svg?height=400&width=400')">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Trabalho 5">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="galeria-item" onclick="openGalleryModal('/placeholder.svg?height=400&width=400')">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Trabalho 6">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Vamos criar algo especial juntos!</p>
+            </div>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>@lilicroche_decor</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>contato@lilicroche.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contato-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lili Crochê Decor</h3>
+                    <p>Transformando fios em arte, criando momentos especiais com muito amor e dedicação.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="#">Amigurumis</a></li>
+                        <li><a href="#">Decoração</a></li>
+                        <li><a href="#">Roupas</a></li>
+                        <li><a href="#">Bebê</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@lilicroche.com</p>
+                    <p><i class="fab fa-instagram"></i> @lilicroche_decor</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lili Crochê Decor. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Amigurumis</h3>
+            <img src="/placeholder.svg?height=300&width=400" alt="Amigurumis">
+            <p>Bichinhos fofos e personalizados feitos com muito carinho. Cada amigurumi é único e pode ser personalizado de acordo com sua preferência.</p>
+            <p><strong>Preço:</strong> A partir de R$ 25,00</p>
+            <button class="btn btn-primary" onclick="contactWhatsApp('Amigurumis')">Fazer Encomenda</button>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Decoração</h3>
+            <img src="/placeholder.svg?height=300&width=400" alt="Decoração">
+            <p>Tapetes, almofadas, enfeites e muito mais para deixar sua casa ainda mais aconchegante e com sua personalidade.</p>
+            <p><strong>Preço:</strong> A partir de R$ 35,00</p>
+            <button class="btn btn-primary" onclick="contactWhatsApp('Decoração')">Fazer Encomenda</button>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Roupas</h3>
+            <img src="/placeholder.svg?height=300&width=400" alt="Roupas">
+            <p>Blusas, vestidos, tops e acessórios únicos e estilosos. Peças exclusivas para você se sentir especial.</p>
+            <p><strong>Preço:</strong> A partir de R$ 45,00</p>
+            <button class="btn btn-primary" onclick="contactWhatsApp('Roupas')">Fazer Encomenda</button>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Bebê</h3>
+            <img src="/placeholder.svg?height=300&width=400" alt="Bebê">
+            <p>Roupinhas, sapatinhos, mantas e acessórios para os pequenos. Feitos com materiais macios e seguros.</p>
+            <p><strong>Preço:</strong> A partir de R$ 30,00</p>
+            <button class="btn btn-primary" onclick="contactWhatsApp('Bebê')">Fazer Encomenda</button>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content gallery-modal-content">
+            <span class="close">&times;</span>
+            <img id="galleryModalImg" src="/placeholder.svg" alt="Galeria">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
