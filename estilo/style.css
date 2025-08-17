@@ -29,11 +29,11 @@ header{
     z-index: 1000;
 }
 
-navbar{
+.navbar{
     padding: 1rem 0;
 }
 
-nav-container{
+.nav-container{
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -41,48 +41,47 @@ nav-container{
     align-items: center;
 }
 
-nav-logo h2{
+.nav-logo h2{
     color: #e91e63;
     font-size: 1,8rem;
     font-weight: 600;
 }
 
-nav-logo span{
+.nav-logo span{
     color: #666;
     font-size: 0.9rem;
     font-style: italic;
 }
 
-nav-menu{
+.nav-menu{
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-nav-link{
+.nav-link{
     text-decoration: none;
     color: #333;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-nav-link:hover{
+.nav-link:hover{
     color: #e91e63;
 }
 
-nav-toggle{
+.nav-toggle{
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
 
-bar{
+.bar{
     width: 25px;
     height: 3px;
     background: #333;
     margin: 3px 0;
     transition: 0,3s;
-
 }
 
 /*Hero Section */
@@ -94,7 +93,24 @@ bar{
     align-items: center;
 }
 
-hero-container{
+.hero-container{
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+}
+
+.hero-subtitle{
     
 }
